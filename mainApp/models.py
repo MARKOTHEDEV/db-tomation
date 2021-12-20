@@ -4,7 +4,10 @@ import uuid
 
 class SolutionDetail(models.Model):
     heading = models.CharField(max_length=400)
-
+    main_icon = models.CharField(max_length=70,default="..")
+    hover_icon = models.CharField(max_length=70,default="..")
+    intro_content = models.TextField(default="..")
+    number = models.CharField(max_length=5,default="..")
 
     def __str__(self):return self.heading
 

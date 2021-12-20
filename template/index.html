@@ -62,31 +62,49 @@
                         </h2>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-20">
-                           <div class="services-item">
-                               <div class="services-icon">
-                                   <div class="image-part">
-                               
-                                       <i class="fas fa-file-word main-img" style="font-size: 3rem;color:orange;"></i>
-                                       <i class="fas fa-file-word hover-img"  style="font-size: 3rem;color:white;"></i>
+
+                        
+                        {% for solution in all_solutions  %}
+                            <div class="col-lg-4 col-md-6 mb-20">
+                                <div class="services-item">
+                                    <div class="services-icon">
+                                        <div class="image-part">
+                                    
+                        
+                            {% if "fas" in solution.main_icon  %}
+                            <i class="fas fa-file-word main-img" style="font-size: 3rem;color:orange;"></i>
+                            <i class="fas fa-file-word hover-img"  style="font-size: 3rem;color:white;"></i>
+
+                            {% else %}
+                            <img class="main-img" src="{{ solution.main_icon }}" alt="">
+                            <img class="hover-img" src="{% static 'assets/images/services/style2/hover-img/2.png' %}" alt="">
+                                
+                            {% endif %}
+                                                    
+                                      
+                                      
+                                        </div>
                                     </div>
-                               </div>
-                               <div class="services-content">
-                                   <div class="services-text">
-                                       <h3 class="title"><a href="#">Backfile Conversion (Document Scanning)</a></h3>
-                                   </div>
-                                   <div class="services-desc">
-                                       <p>
-                                        If your enterprise is such that generates and manages a high volume of documents then our Backfile conversion solution is meant for you. Backfile conversion in itself is the act of replacing large volumes of documents with digital images.
-                                        </p>
-                                   </div>
-                                   <div class="serial-number">
-                                        01 
+                                    <div class="services-content">
+                                        <div class="services-text">
+                                            <h3 class="title"><a href="#">{{ solution.heading }}</a></h3>
+                                        </div>
+                                        <div class="services-desc">
+                                            <p>
+                                            If your enterprise is such that generates and manages a high volume of documents then our Backfile conversion solution is meant for you. Backfile conversion in itself is the act of replacing large volumes of documents with digital images.
+                                            </p>
+                                            <p><a href="{% url 'solutionDetail' solution.id %}">Read More</a></p>
+                                        </div>
+                                        <div class="serial-number">
+                                            {{ solution.number }}
+                                        </div>
                                     </div>
-                               </div>
-                           </div> 
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-20">
+                                </div> 
+                            </div>  
+                        {% endfor %}
+                            
+
+                        <!-- <div class="col-lg-4 col-md-6 mb-20">
                            <div class="services-item pink-bg">
                                <div class="services-icon">
                                    <div class="image-part">
@@ -207,7 +225,7 @@
                                     </div>
                                </div>
                            </div> 
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
