@@ -1,0 +1,324 @@
+  {% load static %}
+  <!--Full width header Start-->
+    <div class="full-width-header">
+        <!--Header Start-->
+        <header id="rs-header" class="rs-header style3 modify2 header-transparent">
+            <!-- Menu Start -->
+            <div 
+            
+            {% if  '/join-pather-ship-network/' in request.path    %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+            
+
+            {% elif  '/work-with-emetrics/' in request.path   %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+            {% elif  '/about/' in request.path   %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+            {% elif 'insight' in request.path %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+            {% elif 'our-team' in request.path %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+
+            {% elif 'solution' in request.path %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+
+            {% elif 'locations' in request.path %}
+            class="menu-area menu-sticky sticky "
+            style='box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);background:blue;'
+
+            
+            {% else %}
+            class="menu-area menu-sticky"
+
+            {% endif %}
+                
+            
+            >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="logo-part">
+                                <a href="/">
+                                    
+                                    <img class="normal-logo" src="{% static 'Tomation.jpg' %}" alt="logo">  
+                                    <img class="sticky-logo" src="{% static 'Tomation.jpg' %}" alt="logo">
+                                </a>
+                            </div>
+                            <div class="mobile-menu">
+                                <a href="#" class="rs-menu-toggle rs-menu-toggle-close">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 text-right">
+                            <div class="rs-menu-area">
+                                <div class="main-menu">
+                                    <nav class="rs-menu pr-100 lg-pr-50 md-pr-0">
+                                       <ul class="nav-menu">
+                                            <li class="rs-mega-menu  current-menu-item"> 
+                                                <a href="{% url 'homePage' %}">Home</a>
+                                                <!-- <ul class="mega-menu"> 
+                                                    <li class="mega-menu-container">
+                                                        <div class="mega-menu-innner">
+                                                            <div class="single-megamenu">
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-title">Home Multipage</li>
+                                                                    <li><a href="index.html">Main Demo</a></li>
+                                                                    <li><a href="index2.html">Digital Agency 01</a></li>
+                                                                    <li><a href="index3.html">IT Solution 01</a></li>
+                                                                    <li><a href="index4.html">Digital Agency 02</a></li>
+                                                                    <li class="active"><a href="index5.html">Software Solution</a></li>
+                                                                    <li><a href="index6.html">Data Analysis</a></li>
+                                                                    <li class="last-item"><a href="index7.html">IT Solution 02</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="single-megamenu">
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-title">Home Multipage</li>
+                                                                    <li><a href="index8.html">Gadgets Repairs</a></li>
+                                                                    <li><a href="index9.html">Application Testing</a></li>
+                                                                    <li><a href="index10.html">IT Solution 03</a></li>
+                                                                    <li><a href="index11.html">Digital Agency Dark</a></li>
+                                                                    <li><a href="index12.html">Web Design Agency</a></li>
+                                                                    <li><a href="index13.html">Branding Agency</a></li>
+                                                                    <li class="last-item"><a href="index14.html">Technology Agency</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="single-megamenu">
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-title">Home Onepage</li>
+                                                                    <li><a href="onepage1.html">Main Demo</a></li>
+                                                                    <li><a href="onepage2.html">Digital Agency 01</a></li>
+                                                                    <li><a href="onepage3.html">IT Solution 01</a></li>
+                                                                    <li><a href="onepage4.html">Digital Agency 02</a></li>
+                                                                    <li><a href="onepage5.html">Software Solution</a></li>
+                                                                    <li><a href="onepage6.html">Data Analysis</a></li>
+                                                                    <li class="last-item"><a href="onepage7.html">IT Solution 02</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="single-megamenu">
+                                                                <ul class="sub-menu">
+                                                                    <li class="menu-title">Home Onepage</li>
+                                                                    <li><a href="onepage8.html">Gadgets Repairs</a></li>
+                                                                    <li><a href="onepage9.html">Application Testing</a></li>
+                                                                    <li><a href="onepage10.html">IT Solution 03</a></li>
+                                                                    <li><a href="onepage11.html">Digital Agency Dark</a></li>
+                                                                    <li><a href="onepage12.html">Web Design Agency</a></li>
+                                                                    <li><a href="onepage13.html">Branding Agency</a></li>
+                                                                    <li class="last-item"><a href="onepage14.html">Technology Agency</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul> -->
+                                                 <!-- //.mega-menu -->  
+                                            </li>
+
+                                            <!-- <li>
+                                                <a href="{% url 'locations' %}">Location</a>
+                                            </li> -->
+
+                                            <!-- <li class="rs-mega-menu  current-menu-item"> 
+                                                <a href="{% url 'list-of-insight' %}">Insight</a>
+                                            </li> -->
+
+                                            <!-- <li class="rs-mega-menu  current-menu-item"> 
+                                                <a href="{% url 'joinPatherShipNetwork' %}">Pathnership Network</a>
+                                            </li> -->
+
+                                           <li class="menu-item-has-children">
+                                               <a href="#">About</a>
+
+                                               <ul class="sub-menu">
+                                                <li><a href="{% url 'about' %}" >About</a></li>
+                                                <li><a href="{% url 'our_team' %}">Our Team</a></li>
+                                               </ul>
+                                           </li>
+                                           <!-- <li class="menu-item-has-children">
+                                               <a href="#">Product</a>
+                                               <ul class="sub-menu">
+                                                   <li><a href="software-development.html">Software Development</a> </li>
+                                                   <li><a href="web-development.html">Web Development</a> </li>
+                                                   <li><a href="analytic-solutions.html">Analytic Solutions</a> </li>
+                                                   <li><a href="product-design.html">Cloud and DevOps</a></li>
+                                                   <li><a href="product-design.html">Product Design</a> </li>
+                                                   <li><a href="data-center.html">Data Center</a> </li>
+                                               </ul>
+                                           </li> -->
+
+                                           <!-- solutions -->
+                                           <!-- <li class="menu-item-has-children">
+                                               <a href="#">Solution</a>
+                                               <ul class="sub-menu">
+                                                          
+                                                          {% for solution in all_solutions %}
+                                                          <li><a href="{% url 'solutionDetail' solution.id %}">
+                                                            {{ solution.heading }}
+                                                            </a></li>
+                                                          {% endfor %}
+                                                              
+                                            
+                                               </ul>
+                                           </li> -->
+
+
+
+                                           <!-- <li class="">
+                                              <a href="blog.html">Blog</a>
+                                      
+                                           </li> -->
+                                           <li>
+                                              <a href="{% url 'contact' %}">Contact</a>
+                                           </li>
+                                       </ul> <!-- //.nav-menu -->
+                                    </nav>                                        
+                                </div> <!-- //.main-menu -->
+                                <div class="expand-btn-inner search-icon hidden-md">
+                                    <ul>
+                                        <!-- <li class="sidebarmenu-search">
+                                            <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
+                                                <i class="flaticon-search"></i>
+                                            </a>
+                                        </li> -->
+                                        <li>
+                                            <a id="nav-expander" class="humburger nav-expander" href="#">
+                                                <span class="dot1"></span>
+                                                <span class="dot2"></span>
+                                                <span class="dot3"></span>
+                                                <span class="dot4"></span>
+                                                <span class="dot5"></span>
+                                                <span class="dot6"></span>
+                                                <span class="dot7"></span>
+                                                <span class="dot8"></span>
+                                                <span class="dot9"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu End -->                    
+        </header>
+        <!--Header End-->
+
+        <!-- Canvas Menu start -->
+        <nav class="right_menu_togle hidden-md">
+            <div class="close-btn">
+                <div class="nav-link">
+                    <a id="nav-close" class="humburger nav-expander" href="#">
+                        <span class="dot1"></span>
+                        <span class="dot2"></span>
+                        <span class="dot3"></span>
+                        <span class="dot4"></span>
+                        <span class="dot5"></span>
+                        <span class="dot6"></span>
+                        <span class="dot7"></span>
+                        <span class="dot8"></span>
+                        <span class="dot9"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="canvas-logo">
+                <!-- <img class="sticky-logo" src="" alt="logo"> -->
+
+                <a href="/"><img src="{% static 'assets/emtrics.svg' %}" alt="logo"></a>
+            </div>
+            <div class="offcanvas-text">
+                <p>
+                    Tomation Solutions is a technology firm with the sole aim of providing for the software solution needs of various businesses. Tomation is  riding on over 17years of on the job practical knowledge of its sister company, SPNS Consulting. 
+                </p>
+                <p>
+                    Our joint practices showcases our vast experience and expertise, and this is the main attraction to our clients.
+                </p>
+            </div>
+            <div class="canvas-contact">
+                  <div class="address-area">
+
+                    
+
+                    <div class="address-list">
+                        <div class="info-content">
+                            <!-- <p class="title"><a class="submit-btn orange-btn"  href="{% url 'joinPatherShipNetwork' %}">Pathnership Network</a></p>
+                            <p class="title"><a class="submit-btn orange-btn" href="{% url 'work-with-emetric' %}">Come Work with us</a></p>
+                            -->
+                            <em></em>
+                            <br/>
+                            <!-- <em><a href="{% url 'work-with-emetric' %}">Come Work with us</a></em> -->
+                        </div>
+                    </div>
+
+                      <div class="address-list">
+                          <div class="info-icon">
+                              <i class="flaticon-location"></i>
+                          </div>
+                          <div class="info-content">
+                              <h4 class="title">Address</h4>
+                              <em> 
+
+                                Allen Avenue 5, Adeboye Solanke Street,, Off Allen Avenue, Ikeja, Lagos NG 
+                             </em>
+                          </div>
+                      </div>
+                    
+                      <div class="address-list">
+                          <div class="info-icon">
+                              <i class="flaticon-email"></i>
+                          </div>
+                          <div class="info-content">
+                              <h4 class="title">Email</h4>
+                              <em><a href="mailto:info@emetricsuite.com"> info@tomationng.com</a></em>
+                          </div>
+
+                          
+                      </div>
+                      <div class="address-list">
+                          <div class="info-icon">
+                              <i class="flaticon-call"></i>
+                          </div>
+                          <div class="info-content">
+                              <h4 class="title">Phone</h4>
+                              <em>07053335000</em>
+                              <!-- <em>+1 616 541 478</em> -->
+                          </div>
+                      </div>
+                  </div>
+                  
+                <ul class="social">
+                    <li>
+                        <a href="#" style="padding: 0 .4rem;" target="_blank"><span><i class="fab fa-facebook"></i></span></a> 
+
+                    </li>
+                    <li>
+
+                        <a href="# " style="padding: 0 .4rem;" target="_blank"><span><i class="fab fa-twitter"></i></span></a> 
+                    </li>
+                    <li>
+
+                        <a href="https://www.linkedin.com/company/tomationsolutions/about/" style="padding: 0 .4rem;" target="_blank"><span><i class="fab fa-linkedin-in"></i></span></a> 
+                    </li>
+                    <li>
+                        <a href="" style="padding: 0 .4rem;" target="_blank"><span><i class="fab fa-instagram"></i></span></a> 
+
+                    </li>
+                     
+                </ul>
+            </div>
+        </nav>
+        <!-- Canvas Menu end -->
+    </div>
+    <!--Full width header End-->
+    
